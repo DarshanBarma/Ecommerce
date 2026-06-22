@@ -24,7 +24,7 @@ public class CategoryService {
                 .orElseThrow(()-> new RuntimeException("Fetch Error: Category not found"));
     }
 
-    public Category createRepository(Category category){
+    public Category createCategory(Category category){
         return categoryRepository.save(category);
     }
 

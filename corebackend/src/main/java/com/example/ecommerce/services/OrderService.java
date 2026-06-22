@@ -24,8 +24,8 @@ public class OrderService {
                 .orElseThrow(() -> new RuntimeException("Fetch Error: Order not found"));
     }
 
-    public List<Order> getOrdersByUser(User user){
-        return orderRepository.findByUser(user);
+    public List<Order> getOrdersByUser(Long userId){
+        return orderRepository.findByUser(userId);
     }
 
     public Order updateOrderStatus(Long id, Order.Status status){
